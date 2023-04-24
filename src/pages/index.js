@@ -30,6 +30,7 @@ export default function Home() {
           setCurrPlayer={setCurrPlayer}
         />
         <p>Current Player: {currPlayer}</p>
+        <br />
 
         <StopwatchTimer
           interruptedNames={players}

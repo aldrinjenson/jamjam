@@ -4,7 +4,9 @@ import React from "react";
 const Instructions = () => {
   return (
     <div className='flex flex-col items-center justify-center mx-auto max-w-lg py-10 px-4 sm:px-6 lg:px-8'>
-      <h1 className='text-4xl font-bold text-center mb-8'>How to Play JAM</h1>
+      <h1 className='text-4xl font-bold text-center mb-8'>
+        How to use this app to play JAM
+      </h1>
       <div className='w-full md:w-3/4'>
         <ol className='list-decimal list-inside text-lg mb-8'>
           <li className='mb-4'>

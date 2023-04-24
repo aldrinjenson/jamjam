@@ -31,7 +31,7 @@ const FirstCall = ({ players, setFirstPlayer, setCurrPlayer }) => {
           value={inputValue}
           onChange={handleInputChange}
           autoComplete='off'
-          className='focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-10 sm:text-sm border-gray-300 rounded-md'
+          className='focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-10 sm:text-sm border-gray-300 rounded-md p-3'
           placeholder='Enter first player name'
         />
         {suggestions.length > 0 && (
@@ -48,6 +48,7 @@ const FirstCall = ({ players, setFirstPlayer, setCurrPlayer }) => {
           </ul>
         )}
       </div>
+      <br />
     </div>
   );
 };
