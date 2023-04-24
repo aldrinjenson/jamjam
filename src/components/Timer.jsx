@@ -19,8 +19,8 @@ const StopwatchTimer = ({
     setIsActive(true);
     setIsPaused(false);
     intervalRef.current = setInterval(() => {
-      setTime((prevTime) => prevTime + 10);
-    }, 10);
+      setTime((prevTime) => prevTime + 100);
+    }, 100);
   };
 
   const handlePause = () => {
@@ -31,8 +31,8 @@ const StopwatchTimer = ({
   const handleResume = () => {
     setIsPaused(false);
     intervalRef.current = setInterval(() => {
-      setTime((prevTime) => prevTime + 10);
-    }, 10);
+      setTime((prevTime) => prevTime + 100);
+    }, 100);
   };
 
   const handleReset = () => {
