@@ -32,6 +32,7 @@ const FinalScores = ({ scores = [] }) => {
 
   return (
     <div className='flex flex-col items-center justify-center'>
+      <h1 className='text-4xl font-bold text-center mt-8 mb-4'>Scores</h1>
       <table className='min-w-full divide-y divide-gray-200'>
         <thead className='bg-gray-50'>
           <tr>

@@ -2,13 +2,14 @@ import FinalScores from "@components/components/FinalScores";
 import FirstCall from "@components/components/FirstCall";
 import InputComponent from "@components/components/InputComponent";
 import Logger from "@components/components/Logger";
+import Navbar from "@components/components/Navbar";
 import StopwatchTimer from "@components/components/Timer";
 import { useState } from "react";
 
 export default function Home() {
   const [players, setPlayers] = useState([]);
   const [firstPlayer, setFirstPlayer] = useState("");
-  const [currPlayer, setCurrPlayer] = useState("");
+  const [currPlayer, setCurrPlayer] = useState(firstPlayer);
   const [scores, setScores] = useState([]);
 
   const addLog = (startTime, endTime, name) => {
@@ -16,11 +17,10 @@ export default function Home() {
     console.log(logObj);
     setScores((scores) => [...scores, logObj]);
   };
-  console.log({ players });
-  console.log(scores);
 
   return (
     <div className='container mx-auto px-4'>
+      <Navbar />
       <InputComponent setPlayers={setPlayers} />
       <p>Players: {players.join(", ")}</p>
       <FirstCall
@@ -28,8 +28,7 @@ export default function Home() {
         setFirstPlayer={setFirstPlayer}
         setCurrPlayer={setCurrPlayer}
       />
-      <p>First Player: {firstPlayer}</p>
-      <p>Current Player: {firstPlayer}</p>
+      <p>Current Player: {currPlayer}</p>
 
       <StopwatchTimer
         interruptedNames={players}
@@ -38,8 +37,6 @@ export default function Home() {
         setCurrentPlayer={setCurrPlayer}
       />
       <Logger logs={scores} />
-
-      <h2>Final Scores</h2>
 
       <FinalScores scores={scores} />
     </div>

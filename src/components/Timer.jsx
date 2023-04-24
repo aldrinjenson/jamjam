@@ -81,10 +81,10 @@ const StopwatchTimer = ({
           type='button'
           className='bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-300 ml-4'
           onClick={() => {
+            setCurrentPlayer(interruptedName);
             addLog(startTime, time, currentPlayer);
             setStartTime(time);
             setIsActive(true);
-            setCurrentPlayer(interruptedName);
             handleResume();
           }}
         >
@@ -118,12 +118,12 @@ const StopwatchTimer = ({
           Interrupt
         </button>
       )}
-      <button
+      {/* <button
         className='bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'
         onClick={handleReset}
       >
         Reset
-      </button>
+      </button> */}
     </div>
   );
 };

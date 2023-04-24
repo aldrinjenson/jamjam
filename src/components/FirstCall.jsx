@@ -23,12 +23,6 @@ const FirstCall = ({ players, setFirstPlayer, setCurrPlayer }) => {
 
   return (
     <div className='w-full sm:w-1/2'>
-      <label
-        htmlFor='first-player-input'
-        className='block text-sm font-medium text-gray-700'
-      >
-        First Player
-      </label>
       <div className='mt-1 relative rounded-md shadow-sm'>
         <input
           type='text'
@@ -38,7 +32,7 @@ const FirstCall = ({ players, setFirstPlayer, setCurrPlayer }) => {
           onChange={handleInputChange}
           autoComplete='off'
           className='focus:ring-indigo-500 focus:border-indigo-500 block w-full pr-10 sm:text-sm border-gray-300 rounded-md'
-          placeholder='Enter player name'
+          placeholder='Enter first player name'
         />
         {suggestions.length > 0 && (
           <ul className='absolute z-10 mt-1 w-full bg-white rounded-md shadow-lg'>
