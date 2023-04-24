@@ -19,26 +19,28 @@ export default function Home() {
   };
 
   return (
-    <div className='container mx-auto px-4'>
+    <div className='mx-auto'>
       <Navbar />
-      <InputComponent setPlayers={setPlayers} />
-      <p>Players: {players.join(", ")}</p>
-      <FirstCall
-        players={players}
-        setFirstPlayer={setFirstPlayer}
-        setCurrPlayer={setCurrPlayer}
-      />
-      <p>Current Player: {currPlayer}</p>
+      <div className='container px-4'>
+        <InputComponent setPlayers={setPlayers} />
+        <p>Players: {players.join(", ")}</p>
+        <FirstCall
+          players={players}
+          setFirstPlayer={setFirstPlayer}
+          setCurrPlayer={setCurrPlayer}
+        />
+        <p>Current Player: {currPlayer}</p>
 
-      <StopwatchTimer
-        interruptedNames={players}
-        addLog={addLog}
-        currentPlayer={currPlayer}
-        setCurrentPlayer={setCurrPlayer}
-      />
-      <Logger logs={scores} />
+        <StopwatchTimer
+          interruptedNames={players}
+          addLog={addLog}
+          currentPlayer={currPlayer}
+          setCurrentPlayer={setCurrPlayer}
+        />
+        <Logger logs={scores} />
 
-      <FinalScores scores={scores} />
+        <FinalScores scores={scores} />
+      </div>
     </div>
   );
 }
