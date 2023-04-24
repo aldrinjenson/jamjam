@@ -48,7 +48,7 @@ const StopwatchTimer = ({
       setIsActive(false);
       setIsPaused(false);
       addLog(startTime, time, currentPlayer);
-      alert("Time Over!");
+      alert("Time Over!\nLast Spoken = " + currentPlayer);
     }
   }, [time]);
 
